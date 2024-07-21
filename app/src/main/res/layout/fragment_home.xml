@@ -24,11 +24,27 @@
             android:id="@+id/notesRecycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            tools:itemCount="3"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar"
             tools:listitem="@layout/row" />
+
+        <TextView
+            android:id="@+id/noDataTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes Not Found"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/addBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addBtn"

@@ -42,7 +42,16 @@ class HomeFragment : Fragment(), ManageClicks {
             binding.notesRecycler.setHasFixedSize(true)
             binding.notesRecycler.layoutManager =
                 StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-            binding.notesRecycler.adapter = NotesAdapter(it, this)
+            val myAdapter = NotesAdapter(it, this)
+            binding.notesRecycler.adapter = myAdapter
+
+            if (myAdapter.itemCount == 0) {
+                binding.notesRecycler.visibility = View.GONE
+                binding.noDataTv.visibility = View.VISIBLE
+            } else {
+                binding.noDataTv.visibility = View.GONE
+                binding.notesRecycler.visibility = View.VISIBLE
+            }
         }
 
         binding.addBtn.setOnClickListener { addButton() }
