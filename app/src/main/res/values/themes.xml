@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyNotesApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="M">true</item>
+    </style>
+
+    <style name="Theme.MyNotesApp" parent="Base.Theme.MyNotesApp" />
+
+    <style name="backgroundStyle">
+        <item name="background">@color/yellow</item>
+    </style>
+
+    <style name="textColor">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="style2">
+        <item name="backgroundTint">@color/yellow</item>
+    </style>
+
+</resources>
